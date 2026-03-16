@@ -1,7 +1,8 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
-import ReactFlow, {
+import {
+  ReactFlow,
   Node,
   Edge,
   Controls,
@@ -12,8 +13,8 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   ReactFlowInstance,
-} from "reactflow";
-import "reactflow/dist/style.css";
+} from "@xyflow/react";
+import "@xyflow/react/dist/style.css";
 import { nodeTypes } from "./custom-nodes";
 import { NodePanel } from "./node-panel";
 import { Save, Play, Undo, Redo, ZoomIn, ZoomOut } from "lucide-react";

@@ -1,65 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: 0 0% 7%;
-  --foreground: 0 0% 98%;
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
   
-  --card: 0 0% 10%;
-  --card-foreground: 0 0% 98%;
+  --color-background: #121212;
+  --color-foreground: #fafafa;
   
-  --popover: 0 0% 10%;
-  --popover-foreground: 0 0% 98%;
+  --color-card: #1a1a1a;
+  --color-card-foreground: #fafafa;
   
-  --primary: 168 84% 50%;
-  --primary-foreground: 0 0% 5%;
+  --color-popover: #1a1a1a;
+  --color-popover-foreground: #fafafa;
   
-  --secondary: 0 0% 16%;
-  --secondary-foreground: 0 0% 98%;
+  --color-primary: #14b8a6;
+  --color-primary-foreground: #0d0d0d;
   
-  --muted: 0 0% 16%;
-  --muted-foreground: 0 0% 64%;
+  --color-secondary: #292929;
+  --color-secondary-foreground: #fafafa;
   
-  --accent: 168 84% 50%;
-  --accent-foreground: 0 0% 5%;
+  --color-muted: #292929;
+  --color-muted-foreground: #a3a3a3;
   
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
+  --color-accent: #14b8a6;
+  --color-accent-foreground: #0d0d0d;
   
-  --border: 0 0% 18%;
-  --input: 0 0% 18%;
-  --ring: 168 84% 50%;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
   
-  --success: 142 76% 46%;
-  --warning: 38 92% 50%;
+  --color-border: #2e2e2e;
+  --color-input: #2e2e2e;
+  --color-ring: #14b8a6;
   
-  --radius: 0.75rem;
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
 }
 
 * {
-  border-color: hsl(var(--border));
+  border-color: var(--color-border);
 }
 
 body {
-  background: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-family: var(--font-sans), system-ui, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--secondary));
+  background: var(--color-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted-foreground));
+  background: var(--color-muted-foreground);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--foreground) / 0.5);
+  background: #737373;
 }
